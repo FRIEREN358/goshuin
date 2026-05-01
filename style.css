@@ -88,3 +88,37 @@ body {
   background: #d4af37;
   color: #000;
 }
+/* ===== フェードイン（スクロール演出） ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 背景ゆらぎ（高級感） ===== */
+body {
+  background: radial-gradient(circle at center, #3b2a1f, #0f0c0a);
+  background-size: 200% 200%;
+  animation: bgMove 10s ease infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 50% 50%; }
+  50% { background-position: 60% 40%; }
+  100% { background-position: 50% 50%; }
+}
+
+/* ===== カードのホバー演出 ===== */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
