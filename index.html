@@ -4,41 +4,126 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>一粒万倍日ご参拝</title>
+<title>大阪御朱印めぐり</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", serif;
+  background: radial-gradient(circle at center, #3b2a1f, #0f0c0a);
+  color: #f5e2b0;
+  line-height: 1.7;
+}
+
+/* ヒーロー */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(circle, rgba(255,215,0,0.2), transparent);
+}
+
+.hero h1 {
+  font-size: 44px;
+  letter-spacing: 2px;
+}
+
+/* セクションタイトル */
+.section-title {
+  margin: 40px 20px 10px;
+  font-size: 20px;
+  border-left: 4px solid gold;
+  padding-left: 10px;
+}
+
+/* カード */
+.card {
+  background: rgba(20,10,5,0.85);
+  margin: 20px;
+  padding: 20px;
+  border-left: 4px solid gold;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* フェード */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 注意 */
+.alert {
+  background: rgba(178,34,34,0.2);
+  border-left: 4px solid #b22222;
+  padding: 12px;
+  margin-top: 10px;
+}
+</style>
 </head>
 
 <body>
 
-<div class="hero fade-in">
-  <h1>一粒万倍日ご参拝</h1>
+<div class="hero fade">
+  <h1>大阪御朱印めぐり</h1>
   <p>2026.05.02 / 9:00 → 17:00</p>
 </div>
 
-<div class="card fade-in">
-  <h2>📋 今日のポイント</h2>
-  <ul>
-    <li>午前で2社回る</li>
-    <li>難波は16:30目標</li>
-    <li>GWで混雑前提</li>
-  </ul>
+<h2 class="section-title fade">📋 本日のポイント</h2>
+
+<div class="card fade">
+<ul>
+<li>午前で2社回る</li>
+<li>難波は16:30目標</li>
+<li>GWで混雑前提</li>
+</ul>
 </div>
 
-<div class="card fade-in">
-  <h2>⏱ 時間目安</h2>
-  <p>各スポット+10〜15分遅れ想定<br>御朱印待ち：最大30分</p>
+<h2 class="section-title fade">⏱ 時間目安</h2>
+
+<div class="card fade">
+各スポット+10〜15分遅れ想定<br>
+御朱印待ち：最大30分
+</div>
+
+<h2 class="section-title fade">🏯 スケジュール</h2>
+
+<div class="card fade">
+<b>四天王寺</b><br>
+10:00 到着 / 約60分
+<div class="alert">混雑時は中心伽藍スキップOK</div>
+</div>
+
+<div class="card fade">
+<b>豊國神社</b><br>
+11:35 到着 / 約20分
+</div>
+
+<div class="card fade">
+<b>難波八阪神社</b><br>
+13:30 到着 / 17:00閉門
+<div class="alert">写真より先に参拝</div>
 </div>
 
 <script>
-const elements = document.querySelectorAll('.fade-in');
+const fades = document.querySelectorAll('.fade');
 
 window.addEventListener('scroll', () => {
-  elements.forEach(el => {
-    const position = el.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
-    if (position < screenHeight - 50) {
+  fades.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
       el.classList.add('show');
     }
   });
