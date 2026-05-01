@@ -1,1 +1,90 @@
+/* ===== 全体 ===== */
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", serif;
+  background: #0f0c0a;
+  color: #f5f2eb;
+  line-height: 1.7;
+}
 
+/* ===== タイトルエリア ===== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle at center, #3b2a1f, #0f0c0a);
+}
+
+.hero h1 {
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.7;
+}
+
+/* ===== カード ===== */
+.card {
+  background: #1a1410;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  border-left: 4px solid #b22222;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ===== セクション見出し ===== */
+.section-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #d4af37;
+}
+
+/* ===== ステップ ===== */
+.step {
+  border-left: 2px solid #b22222;
+  padding-left: 15px;
+  margin: 15px 0;
+}
+
+.step::before {
+  content: "●";
+  color: #b22222;
+  margin-right: 10px;
+}
+
+/* ===== 注意 ===== */
+.alert {
+  background: rgba(178,34,34,0.2);
+  border-left: 4px solid #b22222;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border: 1px solid #d4af37;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+}
+
+/* ===== ボタン ===== */
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.button:hover {
+  background: #d4af37;
+  color: #000;
+}
