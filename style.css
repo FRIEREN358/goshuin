@@ -122,3 +122,33 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
+
+/* ===== タイムライン ===== */
+.timeline {
+  position: relative;
+  margin: 40px 20px;
+  padding-left: 30px;
+  border-left: 2px solid gold;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: gold;
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 12px;
+  color: #c9a85d;
+  margin-bottom: 5px;
+}
