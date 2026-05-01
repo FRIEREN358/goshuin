@@ -1,54 +1,92 @@
-<div class="card">
-<div class="title">一粒万倍日 ご参拝</div>
-2026.05.02 / 9:00 → 17:00
-</div>
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>一粒万倍日 ご参拝</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一粒万倍日 2026.05.02</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;900&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family: sans-serif;
-  background:#f5f0e8;
-  color:#1a1209;
+:root {
+  --ink: #1a1209;
+  --paper: #f5f0e8;
+  --vermillion: #c0392b;
+  --gold: #b8860b;
+  --moss: #4a5e3a;
+  --stone: #8c7a6b;
+  --border: #c8b89a;
 }
 
+/* ← ここ修正済み（超重要） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* カード */
 .card{
   background:#fff;
-  margin:12px;
+  margin:14px;
   padding:16px;
-  border-left:6px solid #b33;
-  border-radius:8px;
+  border-left:6px solid var(--vermillion);
+  border-radius:10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
 }
 
 .title{
-  font-weight:bold;
+  font-weight:600;
   font-size:18px;
+  margin-bottom:6px;
 }
 
 .time{
   color:#666;
+  font-size:13px;
 }
 
 .tip{
-  margin-top:8px;
+  margin-top:10px;
   background:#f3e4e4;
-  padding:8px;
-  border-left:4px solid #b33;
-  border-radius:4px;
-  font-size:14px;
+  padding:10px;
+  border-left:4px solid var(--vermillion);
+  border-radius:6px;
+  font-size:13px;
+}
+
+.header{
+  padding:20px 16px;
+  font-family:'Noto Serif JP', serif;
+}
+
+h1{
+  font-size:24px;
+  margin-bottom:6px;
 }
 </style>
+
 </head>
 
 <body>
 
+<div class="header">
+<h1>大阪御朱印めぐり</h1>
+<div class="time">2026.05.02 / 9:00 → 17:00</div>
+</div>
+
 <div class="card">
-<div class="title">🏯 四天王寺</div>
+<div class="title">🛕 四天王寺</div>
 <span class="time">10:00 到着</span><br>
 所要：約60分
 
